@@ -1,0 +1,22 @@
+{% extends "Store/master.html" %}
+{% block title %}{{ cat.category }}{% endblock %}
+{% block body %}
+<div class="row">
+{% for prod in cat.product_set.all %}
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="{{ prod.image.url }}" alt="product">
+      <div class="caption">
+        <h3>{{ prod.ptitle}}</h3>
+          <h4>{{ prod.brand}}</h4>
+          <p>Price : <srtike>{{ prod.price }}</srtike><br>Actual price : {{ prod.act_price }}</p>
+
+        <p><a href="{% url 'Store:upprod' prod.id %}" class="btn btn-primary" role="button">Detail</a>
+            <a href="{% url 'Store:login'%}" class="btn btn-default" role="button">Buy Now</a></p>
+
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "Store/master.html" %}
+{% block title %}{{ product.ptitle }}{% endblock %}
+{% block body %}
+<div class="row">
+<div class="col-sm-10 col-md-20">
+    <div class="thumbnail">
+      <img src=" {{ product.image.url }}" alt="MyImage">
+	<h4>Product Description : {{ product.discrip }}</h4>
+      <div class="caption">
+        <h3>Color : {{ product.color}}</h3>
+          <h4>Brand : {{ product.brand}}</h4>
+          <p>Price : <srtike>{{ product.price }}</srtike><br>Actual price : {{ product.act_price }}</p>
+		<h6>Rating : {{ product.rating }}</h6>
+		<h6>Review : {{ product.review }}</h6>
+
+      </div>
+    </div>
+  </div>
+</div>
+    <br><br><br><br>
+{% endblock %}

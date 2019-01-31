@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+     <link type="text/css" rel="stylesheet" href="{% static 'css/footer.css' %}">
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'Store:home' %}">Online Bazar</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="{% url 'Store:home' %}">Home <span class="sr-only">(current)</span></a></li>
+
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user">Login</span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart">Cart</span></a></li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  {% block menu %}{% endblock %}
+  </div><!-- /.container-fluid -->
+</nav>
+{% block body %}{% endblock %}
+<embed src="static/image/Fashion.mp3"  autostart="true"
+width="2" height="0">
+</embed>
+<br><br>
+<div class="containr">
+  <img src="static/image/foot.jpg" alt="Notebook" style="width:100%;">
+  <div class="content">
+    <h2>CompanyAddress</h2>
+
+    <p>165/B swatry Road paliament</p>
+    <p>H.N. Singh crossroad</p>
+    <p>New Delhi - 247580</p>
+    <p>India</p><hr>
+      <div style="text-align: center">
+            Terms & Conditions. Privacy Policy. Site map
+            <br>@2018 BuddyKart Product Supplier, Inc. All rights reserved.
+
+        </div>
+  </div>
+
+
+
+    <div class="conte">
+    <h2>CompanyAddress</h2>
+
+    <p>165/B swatry Road paliament</p>
+    <p>H.N. Singh crossroad</p>
+    <p>New Delhi - 247580</p>
+    <p>India</p>
+
+
+  </div>
+
+</div>
+</body>
+
+
+
+</html>

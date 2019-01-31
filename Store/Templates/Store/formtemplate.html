@@ -1,0 +1,18 @@
+{% extends "Store/master.html" %}
+{% block title %}Login{% endblock %}
+{% block body %}
+    <div>
+    <h1>Sign in</h1>
+    <form class="form-horizontal" method="post" enctype="multipart/form-data">
+    {% csrf_token%}
+    {% for field in form %}
+        <span class="danger">{{ field.errors }}</span>
+        <label>{{ field.label_tag }}</label>
+        {{ field }}
+    {% endfor %}
+    <input type="submit" value="SignIn">
+    </form>
+    </div>
+    <br>
+
+{% endblock %}
